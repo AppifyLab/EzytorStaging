@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import HtmlSaver from './HtmlSaver';
+// import './App.css';
+
+import  CustomStyleProvider from "./shared/CustomStyle"
+import  MainLayoutProvider from "./shared/MainLayout"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MainLayoutProvider>
+        <CustomStyleProvider>
+          <HtmlSaver/>
+        </CustomStyleProvider>
+      </MainLayoutProvider>
     </div>
   );
 }
